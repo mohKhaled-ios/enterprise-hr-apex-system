@@ -9050,9 +9050,4 @@ END;
 ALTER TRIGGER "HR"."TRG_BI_SMS_EXAM_MARKS" ENABLE;
 
 SQL> 
-SQL> -- 7. Grants / Privileges (????????? ????????)
-SQL> SELECT DBMS_METADATA.GET_DEPENDENT_DDL('OBJECT_GRANT', table_name) || ';'
-  2  FROM user_tables
-  3  WHERE EXISTS (SELECT 1 FROM user_tab_privs WHERE table_name = user_tables.table_name);
-SQL> 
 SQL> SPOOL OFF;
